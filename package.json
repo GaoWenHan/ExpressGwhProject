@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A production-ready Express.js with TypeScript template project",
   "type": "commonjs",
   "main": "dist/index.js",
@@ -13,6 +13,14 @@
   ],
   "author": "Gao Wenhan",
   "license": "MIT",
+  "files": [
+    "src",
+    "README.md", 
+    "tsconfig.json",
+    "package.json",
+    ".eslintrc.js",
+    ".prettierrc"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node src/index.ts",
