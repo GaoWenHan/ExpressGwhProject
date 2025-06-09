@@ -1,21 +1,15 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.1",
-  "description": "A production-ready Express.js with TypeScript template project",
+  "version": "1.0.2",
+  "description": "",
   "type": "commonjs",
   "main": "dist/index.js",
-  "keywords": [
-    "express",
-    "typescript",
-    "template",
-    "boilerplate",
-    "nodejs"
-  ],
-  "author": "Gao Wenhan",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "files": [
     "src",
-    "README.md", 
+    "README.md",
     "tsconfig.json",
     "package.json",
     ".eslintrc.js",
@@ -30,10 +24,6 @@
     "prepare": "husky install",
     "commit": "cz"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^22.15.30",
