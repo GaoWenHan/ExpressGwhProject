@@ -1,10 +1,11 @@
 import AppDataSource from '../config/database'
 import { User } from '../models/user'
+import { eCreateUserDto } from '../dto/create-user.dto'
 
 export class UserService {
   private userRepository = AppDataSource.getRepository(User)
 
-  async createUser(userData: Partial<User>) {
+  async createUser(userData: eCreateUserDto) {
     const user = this.userRepository.create(userData)
     return await this.userRepository.save(user)
   }

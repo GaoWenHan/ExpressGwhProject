@@ -2,14 +2,14 @@ import { Request, Response } from 'express'
 import { UserService } from '../services/user.service'
 import { plainToClass } from 'class-transformer'
 import { validate } from 'class-validator'
-import { CreateUserDto } from '../dto/create-user.dto'
+import { eCreateUserDto } from '../dto/create-user.dto'
 
 export class UserController {
   private userService = new UserService()
 
   async createUser(req: Request, res: Response) {
     try {
-      const userDto = plainToClass(CreateUserDto, req.body)
+      const userDto = plainToClass(eCreateUserDto, req.body)
       const errors = await validate(userDto)
 
       if (errors.length > 0) {
