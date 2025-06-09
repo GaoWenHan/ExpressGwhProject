@@ -1,8 +1,18 @@
 {
-  "name": "express-ts-project",
+  "name": "express-ts-template-gwh",
   "version": "1.0.0",
+  "description": "A production-ready Express.js with TypeScript template project",
   "type": "commonjs",
   "main": "dist/index.js",
+  "keywords": [
+    "express",
+    "typescript",
+    "template",
+    "boilerplate",
+    "nodejs"
+  ],
+  "author": "Gao Wenhan",
+  "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node src/index.ts",
