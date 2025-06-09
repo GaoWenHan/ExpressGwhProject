@@ -72,8 +72,10 @@ dist
 .out
 .storybook-out
 
-# RollupJS default build output
+# Build output
 dist/
+# Production npm package
+node_modules/
 
 # IDE/Editor
 .idea

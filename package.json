@@ -22,6 +22,7 @@
     ".prettierrc"
   ],
   "scripts": {
+    "postinstall": "node bin/postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node src/index.ts",
     "build": "tsc && node build.js",
