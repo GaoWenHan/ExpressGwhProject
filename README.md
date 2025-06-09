@@ -35,23 +35,51 @@ express-ts-project/
 ## 快速开始
 
 ### 安装依赖
+
+使用npm:
 ```bash
 npm install
 ```
 
+使用pnpm:
+```bash
+pnpm install
+```
+
 ### 开发模式
+
+使用npm:
 ```bash
 npm run dev
 ```
 
+使用pnpm:
+```bash
+pnpm run dev
+```
+
 ### 生产构建
+
+使用npm:
 ```bash
 npm run build
 ```
 
+使用pnpm:
+```bash
+pnpm run build
+```
+
 ### 生产运行
+
+使用npm:
 ```bash
 npm run start
+```
+
+使用pnpm:
+```bash
+pnpm run start
 ```
 
 ## 环境变量
