@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.12",
+  "version": "1.0.5",
   "description": "",
   "type": "commonjs",
   "keywords": [],
@@ -9,17 +9,14 @@
   "files": [
     "template",
     "bin",
-    "README.md",
-    "build.js",
-    ".eslintrc.js",
-    ".prettierrc",
-    "tsconfig.json"
+    "README.md"
   ],
   "main": "bin/create.js",
   "bin": {
     "create-express-ts-app": "bin/create.js"
   },
   "scripts": {
+    "postinstall": "node bin/postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node src/index.ts",
     "build": "tsc && node build.js",
@@ -36,7 +33,6 @@
     "dotenv": "^16.5.0",
     "esbuild": "^0.25.5",
     "express": "^5.1.0",
-    "inquirer": "^12.6.3",
     "mysql2": "^3.14.1",
     "reflect-metadata": "^0.2.2",
     "ts-node": "^10.9.2",
