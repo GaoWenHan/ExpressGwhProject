@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "type": "commonjs",
   "keywords": [],
@@ -10,7 +10,6 @@
     "template",
     "bin",
     "README.md",
-    "build.js",
     ".eslintrc.js",
     ".prettierrc",
     "tsconfig.json"
@@ -22,7 +21,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development ts-node src/index.ts",
-    "build": "tsc && node build.js",
+    "build": "tsc && node scripts/build/esbuild.config.js",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "prepare": "husky install",
     "commit": "cz"
