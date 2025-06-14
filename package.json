@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "",
   "type": "commonjs",
   "keywords": [],
@@ -21,9 +21,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development ts-node src/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node src/index.ts",
     "build": "tsc && node build.js",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -47,6 +47,7 @@
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "commitizen": "^4.3.1",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",

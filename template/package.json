@@ -18,9 +18,9 @@
   "scripts": {
     "postinstall": "node bin/postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development ts-node src/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node src/index.ts",
     "build": "tsc && node build.js",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
     "prepare": "husky install",
     "commit": "cz"
   },
@@ -49,7 +49,8 @@
     "eslint-plugin-prettier": "^5.4.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "cross-env": "^7.0.3"
   },
   "lint-staged": {
     "*.ts": [
