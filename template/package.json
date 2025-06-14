@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.5",
+  "version": "1.0.14",
   "description": "",
   "type": "commonjs",
   "keywords": [],
@@ -9,14 +9,17 @@
   "files": [
     "template",
     "bin",
-    "README.md"
+    "README.md",
+    "build.js",
+    ".eslintrc.js",
+    ".prettierrc",
+    "tsconfig.json"
   ],
   "main": "bin/create.js",
   "bin": {
     "create-express-ts-app": "bin/create.js"
   },
   "scripts": {
-    "postinstall": "node bin/postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development ts-node src/index.ts",
     "build": "tsc && node build.js",
@@ -33,6 +36,7 @@
     "dotenv": "^16.5.0",
     "esbuild": "^0.25.5",
     "express": "^5.1.0",
+    "inquirer": "^12.6.3",
     "mysql2": "^3.14.1",
     "reflect-metadata": "^0.2.2",
     "ts-node": "^10.9.2",
@@ -43,14 +47,14 @@
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "commitizen": "^4.3.1",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.2",
-    "prettier": "^3.5.3",
-    "cross-env": "^7.0.3"
+    "prettier": "^3.5.3"
   },
   "lint-staged": {
     "*.ts": [
