@@ -10,8 +10,6 @@
     "template",
     "bin",
     "README.md",
-    ".eslintrc.js",
-    ".prettierrc",
     "tsconfig.json"
   ],
   "main": "bin/create.js",
