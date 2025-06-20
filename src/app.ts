@@ -1,7 +1,7 @@
 import express from 'express'
 import { requestLogger } from './middlewares/logger'
 import { errorHandler } from './middlewares/errorHandler'
-import userRouter from './routes/user.routes'
+import helloRouter from './routes/hello.routes'
 
 const createApp = () => {
   const app = express()
@@ -12,7 +12,7 @@ const createApp = () => {
   app.use(requestLogger)
 
   // 路由
-  app.use('/api', userRouter)
+  app.use('/', helloRouter)
 
   // 健康检查路由
   app.get('/health', (req, res) => {

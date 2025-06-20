@@ -82,8 +82,14 @@ try {
   process.exit(1)
 }
 
-// 询问是否安装依赖
+// 询问配置选项
 inquirer.prompt([
+  {
+    type: 'confirm',
+    name: 'withDB',
+    message: '是否需要数据库支持(MySQL)?',
+    default: false
+  },
   {
     type: 'confirm',
     name: 'install',
@@ -91,11 +97,33 @@ inquirer.prompt([
     default: true
   }
 ]).then(answers => {
+  // 如果需要数据库支持，复制相关文件
+  if (answers.withDB) {
+    try {
+      console.log(chalk.cyan('📊 正在配置数据库支持...'))
+      fs.copyFileSync(
+        path.join(__dirname, '../optional/database/database.ts'),
+        path.join(projectDir, 'src/config/database.ts')
+      )
+      console.log(chalk.green('✅ 数据库配置完成'))
+    } catch (err) {
+      console.error(chalk.red('❌ 数据库配置失败'))
+    }
+  }
   if (answers.install) {
     try {
       process.chdir(projectDir)
       console.log(chalk.cyan('📦 正在安装依赖...'))
+      
+      // 基础依赖安装
       execSync('npm install', { stdio: 'inherit' })
+      
+      // 如果选择数据库支持，安装可选依赖
+      if (answers.withDB) {
+        console.log(chalk.cyan('🔌 正在安装数据库依赖...'))
+        execSync('npm install mysql2 typeorm', { stdio: 'inherit' })
+      }
+      
       console.log(chalk.green('✅ 依赖安装完成'))
     } catch (err) {
       console.error(chalk.red('❌ 依赖安装失败'))
