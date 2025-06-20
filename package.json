@@ -1,6 +1,6 @@
 {
   "name": "express-ts-template-gwh",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "type": "commonjs",
   "keywords": [],
@@ -10,12 +10,14 @@
     "template",
     "bin",
     "README.md",
-    ".eslintrc.js",
-    ".prettierrc",
     "tsconfig.json"
   ],
   "main": "bin/create.js",
   "bin": {
     "create-express-ts-app": "bin/create.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^12.6.3"
   }
 }
